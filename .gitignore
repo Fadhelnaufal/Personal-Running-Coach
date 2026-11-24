@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# Next.js
+.next/
+out/
+build/
+
+# Testing
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Environment
+.env
+.env*.local
+
+# Supabase local
+supabase/.branches/
+supabase/.temp/
+
+# OS & logs
+.DS_Store
+*.log
+npm-debug.log*

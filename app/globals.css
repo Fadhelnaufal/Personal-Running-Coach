@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #f7f8fc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f4fa;
+  --text-primary: #20212b;
+  --text-secondary: #596070;
+  --border-subtle: #e7eaf1;
+
+  --accent-blue: #3478f6;
+  --accent-blue-strong: #235cd1;
+  --accent-purple: #8b5cf6;
+  --accent-purple-strong: #6d28d9;
+  --accent-cyan: #50c9ce;
+
+  --tint-blue: #edf3ff;
+  --tint-purple: #f1ebff;
+  --tint-cyan: #e8fafa;
+
+  --status-success: #15803d;
+  --status-success-bg: #dcfce7;
+  --status-warning: #b45309;
+  --status-warning-bg: #fef3c7;
+  --status-danger: #b91c1c;
+  --status-danger-bg: #fee2e2;
+
+  --gradient-athletic: linear-gradient(110deg, #3478f6 0%, #8b5cf6 58%, #50c9ce 100%);
+  /* Text-safe athletic focal surface preserving brand colors with >= 4.5:1 white text contrast */
+  --gradient-athletic-hero: linear-gradient(120deg, #2155cd 0%, #5b37c8 62%, #1d7a8c 100%);
+
+  --shadow-card: 0 2px 10px rgba(32, 33, 43, 0.04);
+  --shadow-hero: 0 10px 25px rgba(52, 120, 246, 0.18);
+  --shadow-floating: 0 12px 28px rgba(32, 33, 43, 0.1);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas: var(--bg-canvas);
+  --color-surface: var(--bg-surface);
+  --color-subtle: var(--bg-subtle);
+  --color-ink: var(--text-primary);
+  --color-muted: var(--text-secondary);
+  --color-line: var(--border-subtle);
+}
+
+html,
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+.font-metric {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.athletic-hero-surface {
+  background: var(--gradient-athletic-hero);
+  box-shadow: var(--shadow-hero);
+}
+
+.athletic-accent-bar {
+  background: var(--gradient-athletic);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
